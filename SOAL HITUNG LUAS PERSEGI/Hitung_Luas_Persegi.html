@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set and Get Value Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .all-container{
+            border: 1px orange solid;
+            display: inline-block;
+            padding: 50px;
+            border-radius: 10%;
+        }
+
+        .hitung-luas-persegi-panjang{
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding: 6px;
+            border-bottom: 3px solid orange;
+        }
+
+        .panjang{
+            font-size: 16px;
+        }
+
+        #p{
+            margin-top: 4px;
+            border-radius: 4px;
+            border: solid 1px orange;
+            background-color: orange;
+            color: black;
+            margin-bottom: 8px;
+            width: 80%;
+        }
+
+        .lebar{
+            font-size: 16px;
+        }
+
+        #l{
+            margin-top: 4px;
+            border-radius: 4px;
+            border: solid 1px orange;
+            background-color: orange;
+            color: black;
+            margin-bottom: 20px;
+            width: 80%;
+        }
+
+        .hitung-btn{
+            border: 2px solid orange;
+            background-color: white;
+            padding: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            transition: background-color 0.4s;
+            transition: transform 0.4s;
+        }
+
+        .hitung-btn:hover{
+            background-color: orange;
+            transform: scale(1.1);
+            color: black;
+        }
+
+        .hasil{
+            font-size: 16px;
+        }
+
+        #output{
+            margin-top: 4px;
+            border-radius: 4px;
+            border: solid 3px orange;
+            background-color: white;
+            color: black;
+            margin-bottom: 8px;
+            width: 80%;
+        }
+
+        #reset{
+            border: 2px solid orange;
+            background-color: white;
+            padding: 8px;
+            margin-top: 10px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            transition: background-color 0.4s;
+            transition: transform 0.4s;
+        }
+
+        #reset:hover{
+            background-color: orange;
+            transform: scale(1.1);
+            color: black;   
+        }
+    </style>
+</head>
+<body style="padding-left: 30%; padding-right: 30%; padding-top: 100px;">
+    <div class="all-container">
+        <div class="hitung-luas-persegi-panjang">
+            Hitung Luas Persegi Panjang
+        </div>
+        <div>
+            <div>
+                <span class="panjang">Panjang</span>
+                <div>
+                    <input type="number" id="p">
+                </div>
+            </div>
+            <div>
+                <span class="lebar">Lebar</span>
+                <div>
+                    <input type="number" id="l">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="hitung-btn" onclick="hitungLuas()">Hitung</button>
+        </div>
+        <div>
+            <span class="hasil">Hasil</span>
+            <div>
+                <input type="text" readonly id="output">
+            </div>
+        </div>
+        <div>
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <script>
+        function hitungLuas() {
+            var p = document.getElementById('p').value;
+            var l = document.getElementById('l').value;
+
+            document.getElementById('output').value = p * l;
+        }
+
+        function reset() {
+            var p = document.getElementById('p').value = '';
+            var l = document.getElementById('l').value = '';
+            document.getElementById('output').value = '';
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body{
+    padding-top: 50px;
+}
+
+.container{
+    width: 1140px;
+}
+
+#screen{
+    width:100%;
+    height:auto;
+    background-color:#e2e2e2;
+    margin-bottom: 20px
+}
+
+.nomor1, .nomor4, .nomor7, .clear{
+    margin-bottom: 6px;
+}
+
+.nomor1 h3, .nomor4 h3, .nomor7 h3, .clear h3{
+    width: 40px;
+}
+
+.nomor2, .nomor5, .nomor8, .nomor0{
+    margin-bottom: 6px;
+}
+
+.nomor2 h3, .nomor5 h3, .nomor8 h3, .nomor0 h3{
+    width: 40px;
+}
+
+.nomor3, .nomor6, .nomor9, .result{
+    margin-bottom: 6px;
+}
+
+.nomor3 h3, .nomor6 h3, .nomor9 h3, .result h3{
+    width: 40px;
+}
+
+.operator-kali, .operator-bagi, .operator-kurang, .operator-tambah{
+    margin-bottom: 6px;
+}
+
+.operator-kali h3, .operator-bagi h3, .operator-kurang h3, .operator-tambah h3{
+    width: 40px;
+}
